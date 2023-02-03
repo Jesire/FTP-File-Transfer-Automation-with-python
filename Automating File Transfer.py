@@ -27,7 +27,6 @@ def Auto_File_Transfer():
 
         try:
             # Download the files in the server directory and write them to your local directory
-            # The 'with','as' is a quick way to open, perform operations and close the local file/directory
             with open(local_file, 'wb') as File:
                 ftp_server.retrbinary(f'RETR {file}', File.write)
                 print('Operation successful')
